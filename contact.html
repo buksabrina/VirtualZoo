@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Zoo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+          <a>Virtual Zoo</a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Animals</a>
+          <ul class="dropdown">
+            <li><a href="sea-otters.html">Sea Otters</a></li>
+            <li><a href="pandas.html">Pandas</a></li>
+            <li><a href="penguins.html">Penguins</a></li>
+            <li><a href="jellyfish.html">Jellyfish</a></li>
+            <li><a href="sharks.html">Sharks</a></li>
+            <li><a href="spider-crabs.html">Spider Crabs</a></li>
+            <li><a href="bald-eagles.html">Bald Eagles</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div id="contactFormContainer">
+            <form id="contactForm" onsubmit="showMessage(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name" name="name" required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your Email" name="email" required>
+                <br><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Your Message" name="message" required></textarea>
+                <br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="successMessage" style="display: none;"><br>Thank you for contacting us!</div>
+    </section>
+    <script>
+        function showMessage(event) {
+            event.preventDefault(); 
+            document.getElementById("contactFormContainer").style.display = "none"; 
+            document.getElementById("successMessage").style.display = "block"; 
+        }
+    </script>
+</body>
+</html>
+
